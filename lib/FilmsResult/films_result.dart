@@ -7,10 +7,10 @@ import 'package:get/get.dart';
 class FilmsResult extends StatelessWidget {
   FilmsResult({Key? key}) : super(key: key);
 
-  @override
   final CvsController cvsController = Get.find();
   final FilmController filmController = Get.find();
 
+  @override
   Widget build(BuildContext context) {
     filmController.addFilms();
     var films = filmController.allFilms;
@@ -40,8 +40,8 @@ class FilmsResult extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xffEA98B0).withOpacity(0.5),
-                        Color(0xffFFEFAB).withOpacity(0.5),
+                        const Color(0xffEA98B0).withOpacity(0.5),
+                        const Color(0xffFFEFAB).withOpacity(0.5),
                       ],
                     ),
                   ),
@@ -54,7 +54,7 @@ class FilmsResult extends StatelessWidget {
                       ),
                       height: 65,
                       width: 65,
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_rounded,
                         size: 45,
                         color: Color(0xff9F647F),
@@ -124,7 +124,7 @@ class FilmsResult extends StatelessWidget {
                         index == 0; // Check if it's the first element
 
                     return Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -138,7 +138,7 @@ class FilmsResult extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(3),
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(13),

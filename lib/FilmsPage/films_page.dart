@@ -72,8 +72,8 @@ class FilmsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xffEA98B0).withOpacity(0.5),
-                        Color(0xffFFEFAB).withOpacity(0.5),
+                        const Color(0xffEA98B0).withOpacity(0.5),
+                        const Color(0xffFFEFAB).withOpacity(0.5),
                       ],
                     ),
                   ),
@@ -86,7 +86,7 @@ class FilmsPage extends StatelessWidget {
                       ),
                       height: 65,
                       width: 65,
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_rounded,
                         size: 45,
                         color: Color(0xff9F647F),
@@ -103,7 +103,7 @@ class FilmsPage extends StatelessWidget {
               Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
                       seansAz,
                       style: const TextStyle(
@@ -128,7 +128,7 @@ class FilmsPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
                       seansEn,
                       style: const TextStyle(

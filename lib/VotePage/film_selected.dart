@@ -1,7 +1,6 @@
 import 'package:animafilm_6/FilmsPage/components.dart';
 import 'package:animafilm_6/VotePage/alert_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../Class/film_class.dart';

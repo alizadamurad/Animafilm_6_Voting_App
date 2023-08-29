@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class PassControl extends StatelessWidget {
   PassControl({Key? key}) : super(key: key);
-  TextEditingController textEditingController = TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
   final PasswordController passwordController = Get.find();
   @override
   Widget build(BuildContext context) {

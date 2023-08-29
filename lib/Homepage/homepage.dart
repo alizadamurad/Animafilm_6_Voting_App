@@ -1,6 +1,4 @@
 import 'package:animafilm_6/Drawer/drawer.dart';
-import 'package:animafilm_6/FIlmsResult/films_result.dart';
-import 'package:animafilm_6/FIlmsResult/password_screen.dart';
 import 'package:animafilm_6/FilmsPage/components.dart';
 import 'package:animafilm_6/Homepage/components.dart';
 import 'package:flutter/material.dart';

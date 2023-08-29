@@ -1,4 +1,3 @@
-import 'package:animafilm_6/FilmsPage/components.dart';
 import 'package:animafilm_6/FilmsPage/films_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -50,15 +49,15 @@ class SeansWidget extends StatelessWidget {
                   ));
             },
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Center(
                 child: Text(
-                  "$seansName",
-                  style: TextStyle(
+                  seansName,
+                  style: const TextStyle(
                     fontSize: 25,
                     color: Colors.black,
                     fontFamily: "AsapCondensed",
