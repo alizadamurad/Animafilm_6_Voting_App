@@ -69,7 +69,7 @@ class FilmsResult extends StatelessWidget {
                   onPressed: () {
                     cvsController.generateCsvFile(films);
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.download,
                     size: 35,
                     color: Colors.black,

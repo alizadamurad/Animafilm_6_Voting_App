@@ -1,7 +1,7 @@
 import 'package:animafilm_6/Controllers/cvs_file_converter.dart';
 import 'package:animafilm_6/Controllers/password_controller.dart';
 import 'package:animafilm_6/Controllers/scroll_controller.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
+// import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -12,17 +12,6 @@ import 'Homepage/homepage.dart';
 void main() async {
   await GetStorage.init();
 
-  AwesomeNotifications().initialize(
-    null,
-    [
-      NotificationChannel(
-        importance: NotificationImportance.High,
-        channelKey: 'basic_channel',
-        channelName: 'Csv Notification',
-        channelDescription: 'Csv converted ! ',
-      ),
-    ],
-  );
   Get.put(PasswordController());
   Get.put(CvsController());
   Get.put(FilmController());
