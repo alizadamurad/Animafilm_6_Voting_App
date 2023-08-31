@@ -23,6 +23,10 @@ class FilmsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     filmController.loadFilms(filmler, filmListName);
+    for (var film in filmler) {
+      precacheImage(AssetImage(film.photoUrl), context);
+    }
+    precacheImage(AssetImage('assets/images/animafilm_logoless.png'), context);
     return Stack(
       children: [
         Container(

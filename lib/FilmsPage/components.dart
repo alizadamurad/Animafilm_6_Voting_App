@@ -2,7 +2,6 @@ import 'package:animafilm_6/Controllers/film_controller.dart';
 import 'package:animafilm_6/VotePage/film_selected.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../Class/film_class.dart';
 
 final FilmController filmController = Get.find();
@@ -36,8 +35,6 @@ class FilmWidget extends StatelessWidget {
               title: title,
               url: url,
             ));
-        // value.value++;
-        // filmController.saveFilms(film, filmListName);
       },
       child: Stack(
         clipBehavior: Clip.none,

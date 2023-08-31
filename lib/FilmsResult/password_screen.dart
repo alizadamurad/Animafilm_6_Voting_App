@@ -56,7 +56,6 @@ class PassControl extends StatelessWidget {
                                       Get.focusScope?.unfocus(),
                                     }
                                   : null;
-                              print(text);
                             },
                             style: TextStyle(fontSize: 20),
                             textAlign: TextAlign.center,

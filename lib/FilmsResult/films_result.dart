@@ -67,7 +67,51 @@ class FilmsResult extends StatelessWidget {
             actions: [
               IconButton(
                   onPressed: () {
-                    cvsController.generateCsvFile(films);
+                    cvsController.generateCsvFile();
+                    showModalBottomSheet(
+                      elevation: 0,
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10, right: 10, bottom: 40),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color(0xffFEC417),
+                                  Color(0xffEA98B0),
+                                ],
+                              ),
+                            ),
+                            height: 80,
+                            child: Padding(
+                              padding: const EdgeInsets.all(3.5),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white,
+                                ),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "CSV Exported directory :${cvsController.directory}",
+                                      style: TextStyle(
+                                        fontFamily: "AsapCondensed",
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    );
                   },
                   icon: const Icon(
                     Icons.download,

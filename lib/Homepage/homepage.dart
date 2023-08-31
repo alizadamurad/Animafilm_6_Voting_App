@@ -16,6 +16,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(
+        const AssetImage('assets/images/animafilm_logoless.png'), context);
+
     ScrollController scrollController = ScrollController();
     scrollController = ScrollController()
       ..addListener(() {
