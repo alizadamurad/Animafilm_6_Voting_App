@@ -25,7 +25,6 @@ class CvsController extends GetxController {
     Map<Permission, PermissionStatus> statuses = await [
       Permission.storage,
     ].request();
-
     List<List<dynamic>> rows = [];
     List<dynamic> empty = [];
     // Best Short Grand Prix A
@@ -117,7 +116,7 @@ class CvsController extends GetxController {
     Directory? dir;
     Platform.isAndroid == true
         ? dir = await getExternalStorageDirectory()
-        : getDownloadsDirectory();
+        : await getDownloadsDirectory();
 
     print(dir);
     if (dir != null) {
