@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class PasswordController extends GetxController {
   String cryptoPass =
-      "3ca8ec1fc6a140fe7d47caa6bcd78b544bf0cd95f8b8032838bfe1cbbcafb431";
+      "a0e7471013fcdd135d6a805d51f606b818f79ed80a7db0e037f1dc495986952b";
 
   bool checkPass(String pass) {
     var byte = utf8.encode(pass);
