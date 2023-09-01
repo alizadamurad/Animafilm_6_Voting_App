@@ -29,7 +29,7 @@ class PassControl extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: Get.height * 0.3,
                   width: Get.width * 0.85,
                   child: GlassMorphism(
@@ -57,19 +57,19 @@ class PassControl extends StatelessWidget {
                                     }
                                   : null;
                             },
-                            style: TextStyle(fontSize: 20),
+                            style: const TextStyle(fontSize: 20),
                             textAlign: TextAlign.center,
                             obscureText: false,
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   width: 3,
                                   color: Colors.red,
                                 ),
                                 borderRadius: BorderRadius.circular(25),
                               ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   width: 2,
                                   color: Colors.black,
                                 ),

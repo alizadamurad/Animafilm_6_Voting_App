@@ -118,7 +118,6 @@ class CvsController extends GetxController {
         ? dir = await getExternalStorageDirectory()
         : await getDownloadsDirectory();
 
-    print(dir);
     if (dir != null) {
       directory = dir.path;
 

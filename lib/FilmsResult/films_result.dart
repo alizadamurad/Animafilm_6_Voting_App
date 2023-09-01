@@ -79,7 +79,7 @@ class FilmsResult extends StatelessWidget {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25),
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                 colors: [
                                   Color(0xffFEC417),
                                   Color(0xffEA98B0),
@@ -99,7 +99,7 @@ class FilmsResult extends StatelessWidget {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       "CSV Exported directory :${cvsController.directory}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontFamily: "AsapCondensed",
                                         fontSize: 13,
                                       ),
@@ -192,13 +192,13 @@ class FilmsResult extends StatelessWidget {
                               children: [
                                 Text(
                                   film.title,
-                                  style: TextStyle(fontSize: 30),
+                                  style: const TextStyle(fontSize: 30),
                                 ),
                                 Row(
                                   children: [
                                     Text(
                                       film.value.value.toString(),
-                                      style: TextStyle(fontSize: 30),
+                                      style: const TextStyle(fontSize: 30),
                                     ),
                                     isTopFilm
                                         ? Icon(

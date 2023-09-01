@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
         ),
         Scaffold(
           key: scaffoldKey,
-          drawer: MyDrawer(),
+          drawer: const MyDrawer(),
           backgroundColor: Colors.transparent,
           body: CustomScrollView(
             controller: scrollController,

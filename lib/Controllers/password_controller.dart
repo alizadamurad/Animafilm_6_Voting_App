@@ -11,7 +11,6 @@ class PasswordController extends GetxController {
     var byte = utf8.encode(pass);
     var hash = sha256.convert(byte);
     var hashString = hash.toString();
-    print(pass);
 
     return hashString == cryptoPass;
   }
