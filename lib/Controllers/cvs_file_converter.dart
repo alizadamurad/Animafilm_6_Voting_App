@@ -124,7 +124,7 @@ class CvsController extends GetxController {
 
       DateTime dateTime = DateTime.now();
       String filePath =
-          "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'H:i')}.csv";
+          "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'M_j_H:i')}.csv";
 
       File f = File(filePath);
 
