@@ -51,5 +51,8 @@
     <true/>
     <key>UIFileSharingEnabled</key>
     <true/>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to storage to export CSV files.</string>
+
 </dict>
 </plist>

@@ -22,9 +22,10 @@ class CvsController extends GetxController {
         "bestShortAnimatedForChildrenB");
     filmController.loadFilms(filmController.bestShortAzerbaijanAnimated,
         "bestShortAzerbaijanAnimated");
-    Map<Permission, PermissionStatus> statuses = await [
-      Permission.storage,
-    ].request();
+    // Map<Permission, PermissionStatus> statuses = await [
+    //   Permission.storage,
+    // ].request();
+
     List<List<dynamic>> rows = [];
     List<dynamic> empty = [];
     // Best Short Grand Prix A
@@ -110,6 +111,7 @@ class CvsController extends GetxController {
     //   rows.add(row);
     // }
     String csv = const ListToCsvConverter().convert(rows);
+    var status = await Permission.storage.request();
 
     ///getAplicationDocumentDirectory()
 
@@ -118,16 +120,20 @@ class CvsController extends GetxController {
         ? dir = await getExternalStorageDirectory()
         : await getLibraryDirectory();
 
-    if (dir != null) {
-      directory = dir.path;
+    if (status.isGranted) {
+      if (dir != null) {
+        directory = dir.path;
 
-      DateTime dateTime = DateTime.now();
-      String filePath =
-          "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'M_j_H:i')}.csv";
+        DateTime dateTime = DateTime.now();
+        String filePath =
+            "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'M_j_H:i')}.csv";
 
-      File f = File(filePath);
+        File f = File(filePath);
 
-      await f.writeAsString(csv);
+        await f.writeAsString(csv);
+      }
+    } else {
+      print('ACCESS DENIED');
     }
   }
 
