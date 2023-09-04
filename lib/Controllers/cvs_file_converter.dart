@@ -119,18 +119,22 @@ class CvsController extends GetxController {
     Platform.isAndroid == true
         ? dir = await getExternalStorageDirectory()
         : await getLibraryDirectory();
-
+    print("STATUS $status");
     if (status.isGranted) {
-      if (dir != null) {
-        directory = dir.path;
+      try {
+        if (dir != null) {
+          directory = dir.path;
 
-        DateTime dateTime = DateTime.now();
-        String filePath =
-            "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'M_j_H:i')}.csv";
+          DateTime dateTime = DateTime.now();
+          String filePath =
+              "${dir.path}/CSV_EXPORT_${DateTimeFormat.format(dateTime, format: 'M_j_H:i')}.csv";
 
-        File f = File(filePath);
+          File f = File(filePath);
 
-        await f.writeAsString(csv);
+          await f.writeAsString(csv);
+        }
+      } catch (e) {
+        print(e);
       }
     } else {
       print('ACCESS DENIED');
