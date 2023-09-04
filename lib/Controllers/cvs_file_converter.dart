@@ -116,7 +116,7 @@ class CvsController extends GetxController {
     Directory? dir;
     Platform.isAndroid == true
         ? dir = await getExternalStorageDirectory()
-        : await getApplicationDocumentsDirectory();
+        : await getLibraryDirectory();
 
     if (dir != null) {
       directory = dir.path;
